@@ -1,0 +1,1 @@
+steal("funcunit/qunit", "./chromie_test.js");

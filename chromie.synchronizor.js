@@ -13189,7 +13189,7 @@ $.Controller('Chromie.Synchronizor',
 		{
 			this.renderSolution(paths);
 			this.renderHistroy(paths);
-			if(this.element.find('#steinsgate img').length > 0)
+			if(this.element.find('#steinsgate span').length > 0)
 				this.element.find('#steinsgate').html('');
 			this.element.find('#steinsgate').append(paths.toString()+'<br/>');
 			return true;
@@ -13250,13 +13250,13 @@ $.Controller('Chromie.Synchronizor',
 	af_count: 0,
 	render: function(){
 		this.element.find('#timeline').html(this.clock_number.toString());
-		this.element.find('#steinsgate').html('<img src="leaping.gif" />');
+		this.element.find('#steinsgate').html('<span>processing...</span>');
 		//this.renderClock();
 		this.renderClock();
 		this.renderHistroy([]);
 		if(this.clock_number.length<1) return;
 		var solution = this.traverse(0, this.clock_number, '');
-		if(this.element.find('#steinsgate img').length > 0)
+		if(this.element.find('#steinsgate span').length > 0)
 		{
 			this.element.find('#steinsgate').html('<span style="color:red;">IMPOSSIBLE!</span>');
 			return;

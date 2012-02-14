@@ -13135,7 +13135,7 @@ $.Controller('Chromie.Synchronizor',
 	clock_number: new Array(),
 	init : function(){
 		var self = this;
-		this.element.html("//chromie/synchronizor/views/init.ejs",{}, function(){
+		this.element.html("./views/init.ejs",{}, function(){
 			self.renderClock();
 		});
 	},

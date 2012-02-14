@@ -13250,7 +13250,7 @@ $.Controller('Chromie.Synchronizor',
 	af_count: 0,
 	render: function(){
 		this.element.find('#timeline').html(this.clock_number.toString());
-		this.element.find('#steinsgate').html('<img src="../leaping.gif" />');
+		this.element.find('#steinsgate').html('<img src="leaping.gif" />');
 		//this.renderClock();
 		this.renderClock();
 		this.renderHistroy([]);

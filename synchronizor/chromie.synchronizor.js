@@ -13145,7 +13145,6 @@ $.Controller('Chromie.Synchronizor',
 		this.renderHistroy([]);
 	},
 	'{document} keypress': function(el, ev){
-		steal.dev.log(ev.keyName());
 		switch(ev.keyName()){
 		case '\b':
 		case '0':
@@ -13181,7 +13180,6 @@ $.Controller('Chromie.Synchronizor',
 		var value = attractor_fields[current];
 		if(value == null) 
 		{
-			steal.dev.log('d-mail failed!');
 			return false;
 		}
 		//paths.push(attractor_fields[current].toString()+'['+(current+1)+']'+dir);
@@ -13191,7 +13189,6 @@ $.Controller('Chromie.Synchronizor',
 		{
 			this.renderSolution(paths);
 			this.renderHistroy(paths);
-			steal.dev.log('steins;gate!:'+paths.toString());
 			if(this.element.find('#steinsgate img').length > 0)
 				this.element.find('#steinsgate').html('');
 			this.element.find('#steinsgate').append(paths.toString()+'<br/>');
@@ -13235,7 +13232,6 @@ $.Controller('Chromie.Synchronizor',
 			if(value != "pass")
 			{
 				dmail.push(index);
-				steal.dev.log('No body reaches '+(index+1)+':'+value);
 			}
 		});
 		return dmail;
